@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  color: orange;
+  font-family: adobe-kannada, sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+nav {
+  min-height: 3rem;
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.menu-overlay {
+  width: 30%;
+  background-color: black;
+  text-align: center;
+  display: none;
+}
+.menu-overlay ul {
+  list-style-type: none;
+}
+.menu-overlay a {
+  color: orange;
+  font-size: 4rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu-overlay__login {
+  margin-top: 0.5rem;
+}
+.menu-overlay__login a {
+  color: orange;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+header {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  min-height: 30rem;
+  text-align: center;
+}
+header h1 {
+  font-size: 12rem;
+  margin-bottom: 2rem;
+}
+header p {
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+header input {
+  padding: 15px;
+  background-color: black;
+  color: orange;
+  border: 1px solid orange;
+}
+header input::placeholder {
+  color: orange;
+  opacity: 1;
+}
+
+main {
+  grid-column-start: 5;
+  grid-column-end: 13;
+}
+@media only screen and (max-width: 640px) {
+  main {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+}
+
+aside {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+@media only screen and (max-width: 640px) {
+  aside {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+}
+
+.aside__title {
+  font-weight: bold;
+}
+
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.album {
+  flex-basis: 33%;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 640px) {
+  .album {
+    flex-basis: 100%;
+  }
+}
+.album__image img {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.album__title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
