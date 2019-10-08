@@ -1,0 +1,40 @@
+body {
+  margin: 0 auto;
+  font-style: normal;
+  background-color: #191919;
+}
+
+.header {
+  display: block;
+}
+.header-text {
+  z-index: 9999;
+  color: #DAA520;
+  position: absolute;
+  font-size: 90px;
+  line-height: 90px;
+  font-family: adobe-kannada, sans-serif;
+  padding: 8% 14%;
+}
+.header-img {
+  width: 100%;
+  z-index: -9999;
+}
+.header-button {
+  background-color: #DAA520;
+  padding: 5px 60px;
+  border: none;
+  color: #191919;
+  position: absolute;
+  font-size: 15px;
+  margin: 34% 15%;
+}
+
+.icon {
+  color: #DAA520;
+  position: absolute;
+  margin: 5% 10%;
+  font-size: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */
