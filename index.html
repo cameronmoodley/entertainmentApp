@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ncy1oep.css%22%3E">
+    <link rel="stylesheet" href="scss/styles.css">
 </head>
+
 <body>
-    
+
+    <!-- Button to open the modal login form -->
+    <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+    <!-- The Modal -->
+    <div id="id01" class=" [ modal ] ">
+
+        <!-- Modal Content -->
+        <form class=" [ modal--content animate ] " action="/action_page.php">
+
+            <span onclick="document.getElementById('id01').style.display='none'" class=" [ close ] " title="Close Modal">&times;</span>
+
+            <div class="[ container login ]">
+                <div class=" [ login--header ] ">
+                    <h2 class=" [ login--header__text ] ">LOGIN</h2>
+                </div>
+                <div class=" [ login--label ] ">
+                    <input type="text" class=" [ login--label__input ] " placeholder="Enter Email" name="uname" id="enterEmail" required>
+                </div>
+                <div class=" [ login--label ] ">
+                    <input type="password" class=" [ login--label__input ] " placeholder="Enter Password" name="psw" id="enterPassword" required>
+                </div>
+                <div class=" [ login--btn ] ">
+                    <button type="submit" class=" [ login--btn__text ] " id="loginBtn">Login</button>
+                </div>
+                <br>
+                <div class=" [ login--pswrd ] ">
+                    <span class=" [ login--pswrd__text ] "> <a href="#" id="forgotPassword">Forgot password?</a></span>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
+
 </html>

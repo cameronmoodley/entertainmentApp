@@ -1,0 +1,145 @@
+body {
+  font-family: "adobe-kannada", sans-serif;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+  /* Modal Content/Box */
+}
+.modal--content {
+  background-color: #101010;
+  margin: 5px auto;
+  /* 15% from the top and centered */
+  border: 1px solid #DAA520;
+  width: 30%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  padding-left: 93%;
+  top: 0;
+  color: #DAA520;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: white;
+  cursor: pointer;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: white;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.login {
+  width: 75%;
+  margin: auto;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.login--header__text {
+  color: #DAA520;
+  text-align: center;
+  text-decoration: underline;
+}
+.login--label {
+  text-align: center;
+}
+.login--label__input {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid #DAA520;
+  color: white;
+  padding-left: 15px;
+}
+.login--label__input:focus {
+  outline: none;
+  border: 1px solid white;
+}
+.login--btn {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+.login--btn__text {
+  color: black;
+  background-color: #DAA520;
+  text-align: center;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+}
+.login--pswrd {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.login--pswrd__text {
+  text-align: center;
+}
+.login--pswrd__text a {
+  color: #DAA520;
+  text-decoration: none;
+}
+.login--pswrd__text a:hover {
+  text-decoration: underline;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #DAA520;
+  opacity: 1;
+  /* Firefox */
+  padding-left: 5px;
+}
+
+/*# sourceMappingURL=styles.css.map */
