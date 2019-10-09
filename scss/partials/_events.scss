@@ -1,0 +1,45 @@
+
+.pageTitle{
+
+    margin-left: 15%;
+    padding-left: 10px;
+}
+.eventContainer{
+    width: 70%;
+    margin-left: 15%;
+    box-sizing: border-box;
+}
+.eventCard{
+    float: left;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 25px;
+    width: 250px;
+    border: 2px solid $font-colour;
+    box-shadow: 2px 2px 20px #000000;
+    &__title{
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+    &__img{
+        height: 200px;
+        width: 200px;
+        margin-bottom: 12px;
+    }
+    &__description{
+        margin-bottom: 20px;
+        font-weight: 200;
+    }
+    &__button{
+        border: 2px solid $font-colour;
+        margin-top: 20px;
+        &--textcolor{
+            color: $font-colour;
+            text-align: center;
+            margin: 6px;
+        }
+    }
+
+    
+    
+}
