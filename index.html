@@ -7,55 +7,93 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://use.typekit.net/ncy1oep.css%22%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="scss/styles.css">
 </head>
 
 <body>
 
-    <!-- Button to open the modal login form -->
-    <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+    <div class="[ navigation ]" id="myNavigation">
+        <span onclick="document.getElementById('myNavigation').style.display='none'" class=" [ close ] " title="Close Navigation">&times;</span>
+
+        <ul class="[ navigation-ul ]" id="navigationUl">
+            <li class="[ navigation-li ]">Movies</li>
+            <li class="[ navigation-li ]">Music</li>
+            <li class="[ navigation-li ]">Events</li>
+            <li class="[ navigation-li ]">
+            </li>
+        </ul>
+
+        <ul class="[ navigation-ul ]">
+            <li class="[ navigation-li ]">
+                <button class="[ navigation-li-btn ]" onclick="document.getElementById('loginModal').style.display='block'" id="loginBtn">Login </button>
+            </li>
+            <li class="[ navigation-li ]">
+                <button onclick="removeToken()" class="[ navigation-li-btn ]" id="logoutBtn">Logout </button>
+            </li>
+        </ul>
+
+    </div>
 
     <!-- The Modal -->
-    <div id="id01" class=" [ modal ] ">
+    <div id="loginModal" class=" [ modal ] ">
 
         <!-- Modal Content -->
-        <form class=" [ modal--content animate ] " action="/action_page.php">
+        <div class=" [ modal--content animate ] ">
 
-            <span onclick="document.getElementById('id01').style.display='none'" class=" [ close ] " title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('loginModal').style.display='none'" class=" [ close ] " title="Close Modal">&times;</span>
 
             <div class="[ container login ]">
                 <div class=" [ login--header ] ">
                     <h2 class=" [ login--header__text ] ">LOGIN</h2>
                 </div>
-                <div class=" [ login--label ] ">
+                <div class="[ login--label ]">
                     <input type="text" class=" [ login--label__input ] " placeholder="Enter Email" name="uname" id="enterEmail" required>
                 </div>
-                <div class=" [ login--label ] ">
+                <div class="[ login--label ]">
                     <input type="password" class=" [ login--label__input ] " placeholder="Enter Password" name="psw" id="enterPassword" required>
                 </div>
-                <div class=" [ login--btn ] ">
-                    <button type="submit" class=" [ login--btn__text ] " id="loginBtn">Login</button>
+
+                <p class="[ animated bounce ]" id="wrongUsr">Wrong username or password</p>
+
+                <div class="[ login--btn ]">
+                    <button onclick="onBtnClick()" class=" [ login--btn__text ] " id="loginBtn" class="[ navigation-li-btn ]" onclick="document.getElementById('id01').style.display='block'">Login</button>
                 </div>
                 <br>
-                <div class=" [ login--pswrd ] ">
-                    <span class=" [ login--pswrd__text ] "> <a href="#" id="forgotPassword">Forgot password?</a></span>
+                <div class="[ login--pswrd ]">
+                    <span class="[ login--pswrd__text ]"> <a href="#" id="forgotPassword">Forgot password?</a></span>
                 </div>
             </div>
 
-        </form>
+        </div>
     </div>
+
+    <div class="[ header ]" id="mainContent">
+        <button class="header-button" onclick="document.getElementById('myNavigation').style.display='block'">&#9776</button>
+        <h1 id="header-welcome"></h1>
+        <h1 class="[ header-text ]"> Welcome to your <br>localized <br>entrtainenthub!</h1>
+        <button class="[ header-button-login ]" id="signUp">Login</button>
+        <img class="[ header-img ]" src="img/header-img.jpg" alt="">
+    </div>
+
 
     <script>
         // Get the modal
-        var modal = document.getElementById('id01');
+        var modal = document.getElementById('loginModal');
 
         // When the user clicks anywhere outside of the modal, close it
+
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
+
+
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/34ea11c00a.js" crossorigin="anonymous" SameSite=None></script>
+    <script src="js/login.js"></script>
 </body>
 
-</html>
+</html>5596

@@ -1,5 +1,50 @@
 body {
   font-family: "adobe-kannada", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: block;
+  z-index: -1;
+}
+.header-text {
+  z-index: 1;
+  color: #DAA520;
+  position: absolute;
+  font-size: 90px;
+  line-height: 90px;
+  font-family: adobe-kannada, sans-serif;
+  padding: 8% 14%;
+}
+.header-img {
+  width: 100%;
+  z-index: -9999;
+}
+.header-button {
+  position: absolute;
+  color: #DAA520;
+  border: none;
+  background-color: transparent;
+  right: 650px;
+  z-index: 700;
+  font-size: 3em;
+}
+.header-button-login {
+  background-color: #DAA520;
+  padding: 5px 60px;
+  border: none;
+  color: #191919;
+  position: absolute;
+  font-size: 15px;
+  margin: 34% 15%;
+}
+
+.icon {
+  color: #DAA520;
+  position: absolute;
+  margin: 5% 10%;
+  font-size: 40px;
 }
 
 /* The Modal (background) */
@@ -8,7 +53,7 @@ body {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 1000;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -140,6 +185,63 @@ body {
   opacity: 1;
   /* Firefox */
   padding-left: 5px;
+}
+
+#wrongUsr {
+  display: none;
+  color: red;
+}
+
+.navigation {
+  background-color: #191919;
+  position: fixed;
+  display: none;
+  /* Hidden by default */
+  z-index: 1000;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  width: 25%;
+  margin: 0;
+  height: 100vh;
+  padding: 5% 0 0 5%;
+  padding-top: 5%;
+}
+.navigation-font {
+  color: #DAA520;
+  font-size: 3em;
+}
+.navigation-ul {
+  color: #DAA520;
+  font-size: 2em;
+  margin-top: 20%;
+}
+.navigation-li {
+  list-style: none;
+  font-size: 2em;
+  padding: 5%;
+}
+.navigation-li-btn {
+  background-color: transparent;
+  color: #DAA520;
+  border: none;
+  margin-top: 1em;
+  font-size: 0.5em;
+}
+.navigation-text {
+  color: #DAA520;
+  font-size: 2em;
+  padding-top: 10%;
+}
+.navigation-link {
+  color: #DAA520;
+  font-size: 1.2em;
+  margin-left: 3%;
+}
+
+#mainContent {
+  transition: margin-left 0.9s;
+  /* If you want a transition effect */
 }
 
 /*# sourceMappingURL=styles.css.map */
