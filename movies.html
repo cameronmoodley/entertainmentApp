@@ -2,44 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< Updated upstream
-    <link href="https://fonts.googleapis.com/css?family=Mukta:200,300,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="scss/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Mukta:200,300,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="scss/style.css" />
     <title>Movies</title>
 
-    <style>
-    
-    
-    </style>
+    <style></style>
 </head>
 
 <body>
     <nav>
-            <i class="fas fa-bars sidebar__button" id="sidebar__trigger"></i>
+        <span class="menu" id="menu"><svg xmlns="http://www.w3.org/2000/svg" width="85" height="56" viewBox="0 0 85 56">
+                <defs>
+                    <style>
+                        .a {
+                            fill: none;
+                            stroke: #daa520;
+                            stroke-width: 10px;
+                        }
+                    </style>
+                </defs>
+                <g transform="translate(-148.5 -111.5)">
+                    <line class="a" x2="85" transform="translate(148.5 116.5)" />
+                    <line class="a" x2="85" transform="translate(148.5 139.5)" />
+                    <line class="a" x2="85" transform="translate(148.5 162.5)" />
+                </g>
+            </svg></span>
+        <div class="menu-overlay" id="js-menu-overlay">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Music</a>
+                </li>
+                <li>
+                    <a href="#">Movies</a>
+                </li>
+            </ul>
+            <div class="menu-overlay__login">
+                <a href="#">Login or register</a>
+            </div>
+        </div>
+    </nav>
 
-        <ul id="sidebar" class="sidebar">
-            <li>Home</li>
-        </br>
-            <li>Events</li>
-            <li>Movies</li>
-            <li>Music</li>
-        </ul>   
-    </nav>  
-
-
-
-=======
-    <title>Movies</title>
-</head>
-
-<body>
->>>>>>> Stashed changes
-    <input type="text" name="search" id="search" placeholder="Search by title.....">
-    <button id="searchButton" type="button" onclick="runSearch()" >Search</button>
+    <input type="text" name="search" id="search" placeholder="Search by title....." />
+    <button id="searchButton" type="button" onclick="runSearch()">
+        Search
+    </button>
     <div id="movies"></div>
     <script src="js/movies.js"></script>
 </body>
+
 </html>
