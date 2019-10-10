@@ -2,36 +2,58 @@ const searchBtn = document.querySelector('#searchButton');
 let albumContainer = document.querySelector('.album-container');
 let searchtext = document.querySelector("#search").value;
 let top10 = document.querySelector('.toplist__content');
-
-searchBtn.addEventListener('click',() => {
-    searchResult();
-    topTenResults();
-});
+//let loading = document.querySelector('#loading');
+//searchBtn.addEventListener('submit', handelSearch);
 
 
-  function searchResult() {
+function handelSubmit(e) {
+    e.preventDefault();
+    const searchtext = document.querySelector("#search").value;
+    searchResult(searchtext);
+}
+const form = document.querySelector('#searchForm ')
+form.addEventListener('submit', handelSubmit);
+//searchBtn.addEventListener('click',() => {searchResult();});
+
+
+
+
+  function searchResult(searchtext) {
+      
+      
+      //loading.innerHTML +=`<img src="img/loading-sirkel.gif">`;
+   albumContainer.innerHTML += `<img src="img/loading-sirkel.gif">`;
     fetch(`https://theaudiodb.com/api/v1/json/195003/searchalbum.php?s=${searchtext}`)
         .then((response) => response.json())
         .then((json) => {
-            console.log(json)
             albumContainer.innerHTML = "";
-            top10.innerHTML = ""
             albumCard(json.album)
         })
+        .catch( () => albumContainer.innerHTML +=`
+        <h3> Sorry, we couldn't find what you were looking for, please try again!</h3>
+        `);
+    fetch(`https://theaudiodb.com/api/v1/json/195003/track-top10.php?s=simplyred&s=${searchtext}`)
+        .then((response) => response.json())
+        .then((json) => {
+            top10.innerHTML = ""
+            topTenList(json.track)
+        });
+       
 }
 
-function albumCard (array) {
-    console.log(array);
-    array.map( (object) => {
+    
 
+function albumCard (array) {
+    albumContainer.innerHTML = "";
+
+    array.map( (object) => {
 let albumCover = "";
+
 if(object.strAlbumThumb){
             albumCover = object.strAlbumThumb;
         }else {
             albumCover = src="img/defult-album-notes.jpg"
         }
-
-        
         albumContainer.innerHTML += `
         <div class="album-container" id="albumContainer">
                 <div class="album">
@@ -50,18 +72,9 @@ if(object.strAlbumThumb){
     
     }
 
-    function topTenResults() {
-        fetch(`https://theaudiodb.com/api/v1/json/195003/track-top10.php?s=simplyred&s=${searchtext}`)
-        .then((response) => response.json())
-        .then((json) => {
-            console.log(json)
-            topTenList(json.track)
-        })
-    }
-    topTenResults();
-    
+
     function topTenList(array) {
-        console.log(array);
+        top10.innerHTML = "";
     array.map( (object) => {
         top10.innerHTML += `
                 <ul>
@@ -71,7 +84,9 @@ if(object.strAlbumThumb){
     })
     }
 
-        /*if(search.value = null){
+   
+/*
+        if(search.value = null){
             document.querySelector('.album__title').innerHTML = "We cound not find the artist you were searching for!";
         }else{
             document.querySelector('.album__title').innerHTML = `Music by ${object.srtArtist}`;

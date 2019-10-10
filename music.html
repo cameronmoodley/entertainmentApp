@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ncy1oep.css">
 </head>
+
 <body>
     <div class="container">
             <nav>
@@ -32,10 +33,12 @@
             <header>
                 <h1>Music</h1>
                 <p>Find your favorite music</p>
+               <form id="searchForm">
                 <input type="search" name="search" id="search" placeholder="Enter your favorite artist">
-                <button id="searchButton" type="button">Search</button>
-
+                <button id="searchButton" type="submit">Search</button>
+                </form>
             </header>
+            
             <aside>
                 <div class="toplist">
                         <div class="toplist__title">
@@ -107,6 +110,7 @@
 -->
             </div>
             </main>
+            <div id="loading"></div>
         </div>
         <script src="js/music.js"></script>
 </body>
