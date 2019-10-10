@@ -35,7 +35,7 @@ form.addEventListener('submit', handelSubmit);
     fetch(`https://theaudiodb.com/api/v1/json/195003/track-top10.php?s=simplyred&s=${searchtext}`)
         .then((response) => response.json())
         .then((json) => {
-            top10.innerHTML = ""
+            top10.innerHTML = "";
             topTenList(json.track)
         });
        

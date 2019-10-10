@@ -115,7 +115,7 @@ aside {
 
 .album {
     flex-basis: 33%;
-    margin-bottom: 1rem;
+    margin: 10px;
     @media only screen and (max-width: 640px) {
         flex-basis: 100%;
 	}
@@ -130,7 +130,5 @@ aside {
     &__title {
         font-weight: bold;
         font-size: 1.5rem;
-
-
     }
 }
