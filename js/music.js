@@ -35,7 +35,7 @@ form.addEventListener('submit', handelSubmit);
     fetch(`https://theaudiodb.com/api/v1/json/195003/track-top10.php?s=simplyred&s=${searchtext}`)
         .then((response) => response.json())
         .then((json) => {
-            top10.innerHTML = ""
+            top10.innerHTML = "";
             topTenList(json.track)
         });
        
@@ -55,7 +55,6 @@ if(object.strAlbumThumb){
             albumCover = src="img/defult-album-notes.jpg"
         }
         albumContainer.innerHTML += `
-        <div class="album-container" id="albumContainer">
                 <div class="album">
                     <div class="album__image">
                         <img src="${albumCover}" alt="${object.strAlbum}">
@@ -66,7 +65,6 @@ if(object.strAlbumThumb){
                     <div class="album__year">
                     <p>${object.strGenre}</p>
                     </div>
-                </div>
         `
     })
     
