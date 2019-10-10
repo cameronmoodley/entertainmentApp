@@ -1,18 +1,15 @@
 //never write CSS in here 
-
 //Variables should always be on top
 // @import "partials/variables";
 //Then mixins
 // @import "partials/mixins";
 //Then layout
 @import "partials/layout";
-
 //Then header
 // @import "partials/header";
-
 /////// then everything between header and footer
 @import "partials/passwordModal";
-
 @import "partials/navigationBar";
 // Then footer
 // @import "partials/footer";
+@import 'partials/music';
