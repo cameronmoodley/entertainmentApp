@@ -5,7 +5,7 @@
 
 body {
     background-color: black;
-    color: orange;
+    color: $orange;
     font-family: adobe-kannada, sans-serif;
 }
 
@@ -25,6 +25,7 @@ nav {
     min-height: 3rem;
     grid-column-start: 1;
     grid-column-end: 13;
+    padding: 1rem 0rem;
 }
 
 .menu {
@@ -42,7 +43,7 @@ nav {
     }
 
     a {
-        color: orange;
+        color: $orange;
         font-size: 4rem;
         text-decoration: none;
         font-weight: bold;
@@ -51,7 +52,7 @@ nav {
     &__login {
         margin-top: 0.5rem;
         a {
-            color: orange;
+            color: $orange;
             text-decoration: none;
             font-size: 2rem;
         }
@@ -65,9 +66,16 @@ header {
     grid-column-end: 13;
     min-height: 30rem;
     text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.67);
+    background-blend-mode: overlay;
+    margin-bottom: 4rem;
+    padding: 4rem;
         h1 {
             font-size: 12rem;
             margin-bottom: 2rem;
+            text-transform: capitalize;
         }
         p {
             font-size: 20px;
@@ -76,12 +84,18 @@ header {
         input {
             padding: 15px;
             background-color: black;
-            color: orange;
-            border: 1px solid orange;
+            color: $orange;
+            border: 1px solid $orange;
+            text-transform: capitalize;
             &::placeholder {
-                color: orange;
+                color: $orange;
                 opacity: 1;
             }
+        }
+        button {
+            background-color: $orange;
+            padding: 15px;
+            border: 1px solid $orange;
         }
 }
 
@@ -102,8 +116,23 @@ aside {
 	}
 }
 
-.aside__title {
+
+.toplist {
+    display: none;
+
+&__title {
     font-weight: bold;
+    display: block;
+}
+    &__content {
+        margin-top: 0.7rem;
+        ol {
+            li {
+                padding: 0.5rem 0rem;
+                margin-left: 1rem;
+            }
+        }
+    }
 }
 
 
@@ -114,11 +143,21 @@ aside {
 }
 
 .album {
-    flex-basis: 33%;
+    flex-basis: 30%;
     margin: 10px;
+
+    transition: 0.3s ease;
+    cursor: pointer;
     @media only screen and (max-width: 640px) {
         flex-basis: 100%;
-	}
+    }
+    
+    &:hover {
+        transform: scale(1.1);
+        @media only screen and (max-width: 640px) {
+            transform: none;
+        }
+    }
     &__image {
         img {
             min-width: 100%;
@@ -130,5 +169,6 @@ aside {
     &__title {
         font-weight: bold;
         font-size: 1.5rem;
+        word-break: break-all;
     }
 }

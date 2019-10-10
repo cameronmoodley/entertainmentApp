@@ -251,7 +251,7 @@ body {
 
 body {
   background-color: black;
-  color: orange;
+  color: #DAA520;
   font-family: adobe-kannada, sans-serif;
 }
 
@@ -270,6 +270,7 @@ nav {
   min-height: 3rem;
   grid-column-start: 1;
   grid-column-end: 13;
+  padding: 1rem 0rem;
 }
 
 .menu {
@@ -286,7 +287,7 @@ nav {
   list-style-type: none;
 }
 .menu-overlay a {
-  color: orange;
+  color: #DAA520;
   font-size: 4rem;
   text-decoration: none;
   font-weight: bold;
@@ -295,7 +296,7 @@ nav {
   margin-top: 0.5rem;
 }
 .menu-overlay__login a {
-  color: orange;
+  color: #DAA520;
   text-decoration: none;
   font-size: 2rem;
 }
@@ -305,10 +306,17 @@ header {
   grid-column-end: 13;
   min-height: 30rem;
   text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.67);
+  background-blend-mode: overlay;
+  margin-bottom: 4rem;
+  padding: 4rem;
 }
 header h1 {
   font-size: 12rem;
   margin-bottom: 2rem;
+  text-transform: capitalize;
 }
 header p {
   font-size: 20px;
@@ -317,12 +325,18 @@ header p {
 header input {
   padding: 15px;
   background-color: black;
-  color: orange;
-  border: 1px solid orange;
+  color: #DAA520;
+  border: 1px solid #DAA520;
+  text-transform: capitalize;
 }
 header input::placeholder {
-  color: orange;
+  color: #DAA520;
   opacity: 1;
+}
+header button {
+  background-color: #DAA520;
+  padding: 15px;
+  border: 1px solid #DAA520;
 }
 
 main {
@@ -347,8 +361,19 @@ aside {
   }
 }
 
-.aside__title {
+.toplist {
+  display: none;
+}
+.toplist__title {
   font-weight: bold;
+  display: block;
+}
+.toplist__content {
+  margin-top: 0.7rem;
+}
+.toplist__content ol li {
+  padding: 0.5rem 0rem;
+  margin-left: 1rem;
 }
 
 .album-container {
@@ -358,12 +383,22 @@ aside {
 }
 
 .album {
-  flex-basis: 33%;
+  flex-basis: 30%;
   margin: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 @media only screen and (max-width: 640px) {
   .album {
     flex-basis: 100%;
+  }
+}
+.album:hover {
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 640px) {
+  .album:hover {
+    transform: none;
   }
 }
 .album__image img {
@@ -375,6 +410,7 @@ aside {
 .album__title {
   font-weight: bold;
   font-size: 1.5rem;
+  word-break: break-all;
 }
 
 /*# sourceMappingURL=styles.css.map */
