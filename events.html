@@ -5,17 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+
+    <link rel="stylesheet" href="scss/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mukta:200,300,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Hello</h1>
-    <button onclick="getLocation()">Events Near You</button>
-    <div>
-      <ul id="event-locations"></ul>
+    <div class="javascript--wrapper">
+      <button onclick="getLocation()">Events Near You</button>
+      <div>
+        <ul id="event-locations"></ul>
+      </div>
+      <div>
+        <ul id="event-types"></ul>
+      </div>
+      <div id="event-list"></div>
     </div>
-    <div>
-      <ul id="event-types"></ul>
+
+    <br />
+
+    <div class="wrapper">
+      <section id="section1">
+        <a href="#section4" class="arrow__btn">‹</a>
+      </section>
+      <section id="section2">
+        <a href="#section1" class="arrow__btn">‹</a>
+      </section>
+      <section id="section3">
+        <a href="#section2" class="arrow__btn">‹</a>
+      </section>
+      <section id="section4">
+        <a href="#section3" class="arrow__btn">‹</a>
+      </section>
+      <section id="section5">
+        <a href="#section4" class="arrow__btn">‹</a>
+      </section>
     </div>
-    <div id="event-list"></div>
-    <script src="script.js"></script>
+
+    <script src="js/events.js"></script>
   </body>
 </html>

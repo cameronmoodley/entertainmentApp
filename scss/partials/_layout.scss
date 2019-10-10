@@ -1,0 +1,33 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    background-color: $color-background;
+  }
+  
+  h1{
+    font-family: condor, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 60px;
+    color: $color-yellow;
+    letter-spacing: 2px;
+     }
+    
+     h2{
+    font-family: condor, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: $color-yellow;
+    letter-spacing: 2px;
+     }
+    
+     p{
+        font-family: 'Mukta', sans-serif;
+         color: white;
+         margin: 2px;
+         line-height: 1.2;
+         font-weight: 200;
+     }

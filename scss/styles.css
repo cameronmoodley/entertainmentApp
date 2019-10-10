@@ -1,0 +1,120 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #191919;
+}
+
+h1 {
+  font-family: condor, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 60px;
+  color: #DAA520;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: condor, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #DAA520;
+  letter-spacing: 2px;
+}
+
+p {
+  font-family: "Mukta", sans-serif;
+  color: white;
+  margin: 2px;
+  line-height: 1.2;
+  font-weight: 200;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+.wrapper section {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: 20px 0;
+}
+.wrapper section .item {
+  padding: 0 2px;
+  transition: 250ms all;
+}
+.wrapper section .item:hover {
+  transition: 250ms all;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.wrapper section a {
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  font-size: 6em;
+  background: black;
+  width: 80px;
+  padding-top: 150px;
+  text-align: center;
+  z-index: 1;
+}
+.wrapper section a:nth-of-type(1) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.wrapper section a:nth-of-type(2) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.eventCard {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 25px;
+  width: 250px;
+  border: 2px solid #DAA520;
+  box-shadow: 2px 2px 20px #000000;
+}
+.eventCard__title {
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+.eventCard__img {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 12px;
+}
+.eventCard__description {
+  margin-bottom: 20px;
+  font-weight: 200;
+}
+.eventCard__button {
+  border: 2px solid #DAA520;
+  margin-top: 20px;
+}
+.eventCard__button--textcolor {
+  color: #DAA520;
+  text-align: center;
+  margin: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+  a.arrow__btn {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
