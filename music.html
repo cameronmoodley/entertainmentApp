@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ncy1oep.css">
 </head>
+
 <body>
     <div class="container">
             <nav>
@@ -32,24 +33,26 @@
             <header>
                 <h1>Music</h1>
                 <p>Find your favorite music</p>
+               <form id="searchForm">
                 <input type="search" name="search" id="search" placeholder="Enter your favorite artist">
+                <button id="searchButton" type="submit">Search</button>
+                </form>
             </header>
+            
             <aside>
                 <div class="toplist">
                         <div class="toplist__title">
-                                Top songs from Coldplay
+                               <h3>Top 10 songs</h3> 
                             </div>
                             <div class="toplist__content">
-                                <ul>
-                                    <li>Test</li>
-                                </ul>
+                                
                             </div>
                 </div>
 
             </aside>
             <main>
             <div class="album-container" id="albumContainer">
-                <div class="album">
+                <!--<div class="album">
                     <div class="album__image">
                         <img src="https://via.placeholder.com/150x150" alt="Albumname">
                     </div>
@@ -104,9 +107,11 @@
                                         2019
                                     </div>
                                 </div>
-
+-->
             </div>
             </main>
-    </div>
+            <div id="loading"></div>
+        </div>
+        <script src="js/music.js"></script>
 </body>
 </html>
