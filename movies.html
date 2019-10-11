@@ -13,6 +13,68 @@
 </head>
 
 <body>
+    <div class="[ navigation ]" id="myNavigation">
+                <span onclick="document.getElementById('myNavigation').style.display='none'" class=" [ close ] " title="Close Navigation">&times;</span>
+
+                <ul class="[ navigation-ul ]" id="navigationUl">
+                        <li class="[ navigation-li ]">Movies</li>
+                        <li class="[ navigation-li ]">Music</li>
+                        <li class="[ navigation-li ]">Events</li>
+                        <li class="[ navigation-li ]">
+                            </li>
+                    </ul>
+
+                <ul class="[ navigation-ul ]">
+                        <li class="[ navigation-li ]">
+                                <button class="[ navigation-li-btn ]" onclick="document.getElementById('loginModal').style.display='block'" id="loginBtn">Login </button>
+                            </li>
+                        <li class="[ navigation-li ]">
+                                <button onclick="removeToken()" class="[ navigation-li-btn ]" id="logoutBtn">Logout </button>
+                            </li>
+                    </ul>
+
+            </div>
+
+        
+    <!-- The Modal -->
+        <div id="loginModal" class=" [ modal ] ">
+
+                
+        <!-- Modal Content -->
+                <div class=" [ modal--content animate ] ">
+
+                        <span onclick="document.getElementById('loginModal').style.display='none'" class=" [ close ] " title="Close Modal">&times;</span>
+
+                        <div class="[ container login ]">
+                                <div class=" [ login--header ] ">
+                                        <h2 class=" [ login--header__text ] ">LOGIN</h2>
+                                    </div>
+                                <div class="[ login--label ]">
+                                        <input type="text" class=" [ login--label__input ] " placeholder="Enter Email" name="uname" id="enterEmail" required>
+                                    </div>
+                                <div class="[ login--label ]">
+                                        <input type="password" class=" [ login--label__input ] " placeholder="Enter Password" name="psw" id="enterPassword" required>
+                                    </div>
+
+                                <p class="[ animated bounce ]" id="wrongUsr">Wrong username or password</p>
+
+                                <div class="[ login--btn ]">
+                                        <button onclick="onBtnClick()" class=" [ login--btn__text ] " id="loginBtn" class="[ navigation-li-btn ]" onclick="document.getElementById('id01').style.display='block'">Login</button>
+                                    </div>
+                                <br>
+                                <div class="[ login--pswrd ]">
+                                        <span class="[ login--pswrd__text ]"> <a href="#" id="forgotPassword">Forgot password?</a></span>
+                                    </div>
+                            </div>
+
+                    </div>
+            </div>
+
+    <input type="text" name="search" id="search" placeholder="Search by title....." />
+    <button id="searchButton" type="button" onclick="runSearch(); storeSearch()">
+        Search
+    </button>
+    <div id="movies"></div>
 
         <div class="[ row ]">
                 <div class="[ col-lg-12 ] [ wrapper ]">

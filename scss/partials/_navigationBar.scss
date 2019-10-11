@@ -1,0 +1,72 @@
+.navigation{
+    background-color: #191919; 
+    position: fixed;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    width: 25%; 
+    margin: 0; 
+    height: 100vh;
+    padding: 5% 0 0 5%;
+    padding-top: 5%; 
+
+    &-font{
+        color: #DAA520;
+        font-size: 3em;   
+    }
+    &-ul{
+        color: #DAA520;
+        font-size: 2em; 
+
+    }
+    &-li{
+        list-style: none; 
+        font-size: 2em;
+        padding: 5%;  
+        & a{
+            text-decoration: none;
+            color: #DAA520;
+        }
+
+        &-btn{
+            background-color: transparent;
+            color: #DAA520;
+            border: none;
+            margin-top: 1em;
+            font-size: .5em;
+        }
+    }
+    &-text{
+        color: #DAA520;
+        font-size: 2em; 
+        padding-top: 10%; 
+    }
+    &-link{
+        color: #DAA520;
+        font-size: 1.2em; 
+        margin-left: 3%; 
+    }
+
+}
+
+#mainContent {
+    transition: margin-left .9s; /* If you want a transition effect */
+
+  }
+
+  /* The Close Button */
+  .closeNav {
+    /* Position it in the top right corner outside of the modal */
+    
+    padding-left: 85%;
+    top: 0;
+    color: #DAA520;
+    font-size: 35px;
+    font-weight: bold;
+  
+    &:hover, &:focus {
+      color: white;
+      cursor: pointer;
+    }
+  }

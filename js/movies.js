@@ -70,7 +70,7 @@ function storeSearch() {
 }
 
 
-//slider code
+//image slider 
 
 $(document).ready(function () {
     $('.movie-poster').slick({
