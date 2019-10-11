@@ -18,6 +18,7 @@ function runSearch() {
             })
             .then(function (result) {
                 document.getElementById('movies').innerHTML = "";
+
                 let data = result;
                 if (!data.Error) {
                     console.log(data)
@@ -35,6 +36,12 @@ function runSearch() {
     } else {
         console.log("The movie you are looking for can not be found.")
     }
+}
+
+function loading(){
+    let movies = document.getElementById('movies');
+    movies.innerHTML = "";
+    movies.innerHTML += `<div class="[ loading-animation ]"></div>`;
 }
 
 
