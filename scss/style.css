@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .loading-animation {
   position: absolute;
   left: 50%;
@@ -33,15 +37,25 @@ body {
 }
 
 .wrapper {
-  background-color: transparent;
-  border-radius: 2px;
-  box-sizing: border-box;
   height: 300px;
-  left: 45%;
-  margin: -150px 0 0 -150px;
+  left: 20%;
+  margin: -50px 0 0 -150px;
   position: absolute;
   top: 50%;
-  width: 400px;
+}
+
+.underline {
+  background-color: #daa520;
+  display: inline-block;
+  height: 2px;
+  margin-top: -4px;
+  position: relative;
+  top: 185px;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  width: 502px;
 }
 
 .input {
@@ -51,8 +65,8 @@ body {
   box-sizing: border-box;
   font-family: "adobe-kannada", sans-serif;
   font-size: 4em;
-  height: 50px;
-  left: 50%;
+  height: 60px;
+  left: 42%;
   margin: -25px 0 0 -100px;
   padding: 10px 0px;
   position: relative;
@@ -73,21 +87,6 @@ input:focus::-webkit-input-placeholder {
 
 .input:focus + .underline {
   transform: scale(1);
-}
-
-.underline {
-  background-color: #daa520;
-  display: inline-block;
-  height: 2px;
-  left: -10px;
-  margin-top: -4px;
-  position: absolute;
-  top: 185px;
-  -webkit-transform: scale(0, 1);
-  transform: scale(0, 1);
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-  width: 502px;
 }
 
 .title {
@@ -228,6 +227,11 @@ input:focus::-webkit-input-placeholder {
 
 button {
   background-color: #daa520;
+}
+
+.movies {
+  text-align: center;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

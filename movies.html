@@ -4,32 +4,36 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Movies</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="https://use.typekit.net/ncy1oep.css%22%3E">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="scss/style.css">
 
 </head>
 
 <body>
 
-    <div class="wrapper">
-        <input class="input" placeholder="Search..." type="text" id="search">
-        <span class="underline"></span>
-        <button onclick="loading();runSearch();storeSearch() "> Search </button>
-    </div>
-
-
+        
+    <div class="[ row ]">
+        <div class="[ col-lg-12 ] [ wrapper ]">
+                <input class="input" placeholder="Search..." type="text" id="search">
+                <span class="underline"></span>
+                <button onclick="loading();runSearch();storeSearch() "> Search </button>
+        </div>
+</div>
 
     <div class="title">MOVIES</div>
+
+    <div id="movies" class="[ movies ]"></div>
+
+<div class="[ row ]">
     <div class="title_trend">Trending Movies
     </div>
+</div>
     <div class="container">
 
-        <div id="movies"></div>
-
-
+        <div class="[ col-lg-12 ]">
         <section class="movie-poster slider">
             <div class="slide"><img
                     src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg">
@@ -59,13 +63,22 @@
                     src="https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg">
             </div>
         </section>
+        </div>
+
         <br>
         <br>
         <br>
         <br>
+
+        <div class="[ row ]">
         <div class="title_new">New Releases
         </div>
+        </div>
+
+
         <div class="container">
+
+                <div class="[ col-lg-12 ]">
             <section class="movie-poster slider">
                 <div class="slide"><img
                         src="https://m.media-amazon.com/images/M/MV5BYTJlNjlkZTktNjEwOS00NzI5LTlkNDAtZmEwZDFmYmM2MjU2XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg">
@@ -95,6 +108,7 @@
                         src="https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg">
                 </div>
             </section>
+        </div>
 
             <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
