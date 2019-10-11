@@ -26,7 +26,8 @@ body{
     color: #DAA520;
     border: none;
     background-color: transparent;
-    right: 650px;
+    left: 100px;
+    top: 30px;
     z-index: 700;
     font-size: 3em; 
     
@@ -38,7 +39,8 @@ body{
       color: #191919;
       position: absolute;
       font-size: 15px;
-      margin: 34% 15%;
+      margin-top: 30%;
+      margin-left: 14%;
   }
   }
 
@@ -51,3 +53,12 @@ body{
   font-size: 40px;
 }
 
+#header-welcome{
+  position: absolute;
+
+}
+
+.help{
+  left: 200px;
+  top: 40px;
+}

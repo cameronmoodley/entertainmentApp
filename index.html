@@ -14,14 +14,12 @@
 <body>
 
     <div class="[ navigation ]" id="myNavigation">
-        <span onclick="document.getElementById('myNavigation').style.display='none'" class=" [ close ] " title="Close Navigation">&times;</span>
+        <span onclick="document.getElementById('myNavigation').style.display='none'" class=" [ closeNav ] " title="Close Navigation">&times;</span>
 
         <ul class="[ navigation-ul ]" id="navigationUl">
-            <li class="[ navigation-li ]">Movies</li>
-            <li class="[ navigation-li ]">Music</li>
-            <li class="[ navigation-li ]">Events</li>
-            <li class="[ navigation-li ]">
-            </li>
+            <li class="[ navigation-li ]"><a href="movies.html">Movies</a></li>
+            <li class="[ navigation-li ]"><a href="music.html">Music</a></li>
+            <li class="[ navigation-li ]"><a href="events.html">Events</a></li>
         </ul>
 
         <ul class="[ navigation-ul ]">
@@ -43,7 +41,7 @@
 
             <span onclick="document.getElementById('loginModal').style.display='none'" class=" [ close ] " title="Close Modal">&times;</span>
 
-            <div class="[ container login ]">
+            <div class="[ containerLogin login ]">
                 <div class=" [ login--header ] ">
                     <h2 class=" [ login--header__text ] ">LOGIN</h2>
                 </div>
@@ -69,8 +67,9 @@
     </div>
 
     <div class="[ header ]" id="mainContent">
-        <button class="header-button" onclick="document.getElementById('myNavigation').style.display='block'">&#9776</button>
-        <h1 id="header-welcome"></h1>
+        <i class="fas fa-bars header-button" onclick="document.getElementById('myNavigation').style.display='block'"></i>  
+        <!--<button class="header-button" onclick="document.getElementById('myNavigation').style.display='block'">&#9776</button>-->
+        <h1 id="header-welcome" class=" [ help ] "></h1>
         <h1 class="[ header-text ]"> Welcome to your <br>localized <br>entrtainenthub!</h1>
         <button class="[ header-button-login ]" id="signUp">Login</button>
         <img class="[ header-img ]" src="img/header-img.jpg" alt="">
@@ -96,4 +95,4 @@
     <script src="js/login.js"></script>
 </body>
 
-</html>5596
+</html>
