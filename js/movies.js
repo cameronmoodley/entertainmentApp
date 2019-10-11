@@ -1,3 +1,5 @@
+// search movie function start
+
 let data = [];
 
 function runSearch() {
@@ -39,33 +41,4 @@ function runSearch() {
     }
 }
 
-
-
-
-// navbar
-
-const sidebar = document.getElementById("sidebar");
-const sidebarTrigger = document.getElementById("sidebar__trigger");
-
-sidebarTrigger.addEventListener('click', () => {
-    if (sidebar.classList.contains('isClosed')) {
-        sidebar.classList.remove('isClosed');
-    } else {
-        sidebar.classList.add('isClosed');
-    }
-})
-
-
-//modal js
-
-
-// Get the modal
-var modal = document.getElementById('loginModal');
-
-// When the user clicks anywhere outside of the modal, close it
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// search movie function end
