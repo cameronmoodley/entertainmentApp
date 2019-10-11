@@ -1,33 +1,3 @@
-.loading-animation {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #000000;
-  border-radius: 50%;
-  border-top: 16px solid #DAA520;
-  width: 100px;
-  height: 100px;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 body {
   background-color: #191919;
 }
@@ -226,8 +196,4 @@ input:focus::-webkit-input-placeholder {
   display: none;
 }
 
-button {
-  background-color: #daa520;
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */
