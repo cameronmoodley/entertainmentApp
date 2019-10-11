@@ -4,7 +4,11 @@ let data = [];
 
 function runSearch() {
     let searchInput = document.getElementById("search").value;
+
+
     if (searchInput !== "") {
+
+        
         fetch('http://www.omdbapi.com/?apikey=537e0a91&t=' + searchInput)
 
             .then(function (response) {
