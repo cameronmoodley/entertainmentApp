@@ -1,10 +1,16 @@
+// search movie function start
+
 let data = [];
 let storedSearches = [];
 
 
 function runSearch() {
     let searchInput = document.getElementById("search").value;
+
+
     if (searchInput !== "") {
+
+        
         fetch('http://www.omdbapi.com/?apikey=537e0a91&t=' + searchInput)
 
             .then(function (response) {
@@ -35,33 +41,6 @@ function runSearch() {
 
 
 
-// navbar
-
-const sidebar = document.getElementById("sidebar");
-const sidebarTrigger = document.getElementById("sidebar__trigger");
-
-sidebarTrigger.addEventListener('click', () => {
-    if (sidebar.classList.contains('isClosed')) {
-        sidebar.classList.remove('isClosed');
-    } else {
-        sidebar.classList.add('isClosed');
-    }
-})
-
-
-//modal js
-
-
-// Get the modal
-var modal = document.getElementById('loginModal');
-
-// When the user clicks anywhere outside of the modal, close it
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 // Store previous searches
 
