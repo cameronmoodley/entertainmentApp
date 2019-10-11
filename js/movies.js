@@ -7,7 +7,6 @@ let storedSearches = [];
 function runSearch() {
     let searchInput = document.getElementById("search").value;
 
-
     if (searchInput !== "") {
 
         
@@ -37,9 +36,6 @@ function runSearch() {
         console.log("The movie you are looking for can not be found.")
     }
 }
-
-
-
 
 
 // Store previous searches

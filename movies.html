@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
-    <link rel="stylesheet" href="https://use.typekit.net/ncy1oep.css%22%3E"> 
-    <link rel="stylesheet" type="text/css" href="scss/style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/ncy1oep.css%22%3E"> 
+        <link rel="stylesheet" type="text/css" href="scss/style.css">
 
-    <title>Movies</title>
+        <title>Movies</title>
 
-    <style></style>
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <input type="text" name="search" id="search" placeholder="Search by title....." />
-    <button id="searchButton" type="button" onclick="runSearch(); storeSearch()">
-        Search
-    </button>
+        <input type="search" id="search">
+        <button onclick="runSearch()"> Search </button>
 
-    <div id="movies"></div>
+
+        <div id="movies"></div>
     
-    <script src="js/movies.js"></script>
-</body>
+        <script src="js/movies.js"></script>
+    </body>
 
 </html>
