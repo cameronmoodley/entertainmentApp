@@ -36,6 +36,11 @@ body {
   background-color: #191919;
 }
 
+.movies {
+  text-align: center;
+  color: white;
+}
+
 .wrapper {
   height: 300px;
   left: 20%;
@@ -56,6 +61,16 @@ body {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
   width: 502px;
+}
+
+.searchBtn {
+  background-color: #daa520;
+  position: relative;
+  top: 47%;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100px;
+  font-size: 1.5em;
 }
 
 .input {
@@ -223,15 +238,6 @@ input:focus::-webkit-input-placeholder {
 
 .slick-arrow.slick-hidden {
   display: none;
-}
-
-button {
-  background-color: #daa520;
-}
-
-.movies {
-  text-align: center;
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
