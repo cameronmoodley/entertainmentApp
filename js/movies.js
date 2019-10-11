@@ -16,19 +16,25 @@ function runSearch() {
                 return response.json()
             })
             .then(function (result) {
-                document.getElementsByClassName("container").innerHTML+="";
                 document.getElementById('movies').innerHTML = "";
 
                 let data = result;
                 if (!data.Error) {
                     console.log(data)
+                    document.querySelectorAll(".slider-div").innerHTML="";
                     document.getElementById('movies').innerHTML += `
-                    <div>
-                        <h1>${data.Title}</h1> 
-                        <img src="${data.Poster}">                        
-                        <div><span><p>${(data.Ratings.length > 1) ? data.Ratings[1].Source : 'No Rating Available'}</p></span><span><p>${(data.Ratings.length > 1) ? data.Ratings[1].Value : " "}</p></span></div>                        
-                        <p> ${data.Genre}</p>
-                        <p> ${data.Plot}</p>                        
+                    <div class="[ card--container ]">
+                        <div class="[ card--container__title ]">
+                            <h1>${data.Title}</h1> 
+                        </div>
+                        <div class="[ card--container__poster ]">
+                            <img src="${data.Poster}">
+                        </div>
+                        <div class="[ card--container__body ]">
+                            <div><span><p>${(data.Ratings.length > 1) ? data.Ratings[1].Source : 'No Rating Available'}</p></span><span><p>${(data.Ratings.length > 1) ? data.Ratings[1].Value : " "}</p></span></div>
+                            <p> ${data.Genre}</p>
+                            <p> ${data.Plot}</p>    
+                        </div>                    
                     </div>`
                 } else {
                     console.log("The movie you are looking for can not be found.")
@@ -43,7 +49,6 @@ function runSearch() {
 // loading GIF
 
 function loading() {
-    document.innerHTML="";
     let movies = document.getElementById('movies');
     movies.innerHTML = "";
     movies.innerHTML += `<div class="[ loading-animation ]"></div>`;
