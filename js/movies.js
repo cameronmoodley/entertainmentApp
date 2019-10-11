@@ -9,7 +9,6 @@ function runSearch() {
 
     if (searchInput !== "") {
 
-        
         fetch('http://www.omdbapi.com/?apikey=537e0a91&t=' + searchInput)
 
             .then(function (response) {
@@ -38,7 +37,7 @@ function runSearch() {
     }
 }
 
-function loading(){
+function loading() {
     let movies = document.getElementById('movies');
     movies.innerHTML = "";
     movies.innerHTML += `<div class="[ loading-animation ]"></div>`;
