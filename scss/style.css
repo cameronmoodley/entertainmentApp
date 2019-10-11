@@ -39,6 +39,8 @@ body {
 .movies {
   text-align: center;
   color: white;
+  margin: 50px 0px;
+  font-size: 1em;
 }
 
 .wrapper {
@@ -128,6 +130,15 @@ input:focus::-webkit-input-placeholder {
 }
 
 /* Slider */
+.slide {
+  transition: transform 0.5s ease;
+}
+
+.slide:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px #ffffff;
+}
+
 .slick-slide {
   margin: 0px 20px;
 }

@@ -16,6 +16,7 @@ function runSearch() {
                 return response.json()
             })
             .then(function (result) {
+                document.getElementsByClassName("container").innerHTML+="";
                 document.getElementById('movies').innerHTML = "";
 
                 let data = result;
@@ -23,7 +24,7 @@ function runSearch() {
                     console.log(data)
                     document.getElementById('movies').innerHTML += `
                     <div>
-                        <h1>${data.Title}<h1> 
+                        <h1>${data.Title}</h1> 
                         <img src="${data.Poster}">                        
                         <div><span><p>${(data.Ratings.length > 1) ? data.Ratings[1].Source : 'No Rating Available'}</p></span><span><p>${(data.Ratings.length > 1) ? data.Ratings[1].Value : " "}</p></span></div>                        
                         <p> ${data.Genre}</p>

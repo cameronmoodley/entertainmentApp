@@ -13,68 +13,6 @@
 </head>
 
 <body>
-    <div class="[ navigation ]" id="myNavigation">
-                <span onclick="document.getElementById('myNavigation').style.display='none'" class=" [ close ] " title="Close Navigation">&times;</span>
-
-                <ul class="[ navigation-ul ]" id="navigationUl">
-                        <li class="[ navigation-li ]">Movies</li>
-                        <li class="[ navigation-li ]">Music</li>
-                        <li class="[ navigation-li ]">Events</li>
-                        <li class="[ navigation-li ]">
-                            </li>
-                    </ul>
-
-                <ul class="[ navigation-ul ]">
-                        <li class="[ navigation-li ]">
-                                <button class="[ navigation-li-btn ]" onclick="document.getElementById('loginModal').style.display='block'" id="loginBtn">Login </button>
-                            </li>
-                        <li class="[ navigation-li ]">
-                                <button onclick="removeToken()" class="[ navigation-li-btn ]" id="logoutBtn">Logout </button>
-                            </li>
-                    </ul>
-
-            </div>
-
-        
-    <!-- The Modal -->
-        <div id="loginModal" class=" [ modal ] ">
-
-                
-        <!-- Modal Content -->
-                <div class=" [ modal--content animate ] ">
-
-                        <span onclick="document.getElementById('loginModal').style.display='none'" class=" [ close ] " title="Close Modal">&times;</span>
-
-                        <div class="[ container login ]">
-                                <div class=" [ login--header ] ">
-                                        <h2 class=" [ login--header__text ] ">LOGIN</h2>
-                                    </div>
-                                <div class="[ login--label ]">
-                                        <input type="text" class=" [ login--label__input ] " placeholder="Enter Email" name="uname" id="enterEmail" required>
-                                    </div>
-                                <div class="[ login--label ]">
-                                        <input type="password" class=" [ login--label__input ] " placeholder="Enter Password" name="psw" id="enterPassword" required>
-                                    </div>
-
-                                <p class="[ animated bounce ]" id="wrongUsr">Wrong username or password</p>
-
-                                <div class="[ login--btn ]">
-                                        <button onclick="onBtnClick()" class=" [ login--btn__text ] " id="loginBtn" class="[ navigation-li-btn ]" onclick="document.getElementById('id01').style.display='block'">Login</button>
-                                    </div>
-                                <br>
-                                <div class="[ login--pswrd ]">
-                                        <span class="[ login--pswrd__text ]"> <a href="#" id="forgotPassword">Forgot password?</a></span>
-                                    </div>
-                            </div>
-
-                    </div>
-            </div>
-
-    <input type="text" name="search" id="search" placeholder="Search by title....." />
-    <button id="searchButton" type="button" onclick="runSearch(); storeSearch()">
-        Search
-    </button>
-    <div id="movies"></div>
 
         <div class="[ row ]">
                 <div class="[ col-lg-12 ] [ wrapper ]">
@@ -95,85 +33,94 @@
         <div class="container">
                 <div class="[ col-lg-12 ]">
                         <section class="movie-poster slider">
-                                <div class="slide"><img
+                                <div class="slide">
+                                        <img
                                                 src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg">
                                 </div>
-                                <div class="slide"><img
+                                <div class="slide">
+                                        <img
                                                 src="https://m.media-amazon.com/images/M/MV5BMTc5NDcxNjg5N15BMl5BanBnXkFtZTcwMDIyNzczMw@@._V1_SX300.jpg">
                                 </div>
-                                <div class="slide"><img
+                                <div class="slide">
+                                        <img
                                                 src="https://m.media-amazon.com/images/M/MV5BMTY4NjQ5NDc0Nl5BMl5BanBnXkFtZTYwNjk5NDM3._V1_SX300.jpg">
                                 </div>
-                                <div class="slide"><img
+                                <div class="slide">
+                                        <img
                                                 src="https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg">
                                 </div>
-                                <div class="slide"><img
+                                <div class="slide">
+                                        <img
                                                 src="https://m.media-amazon.com/images/M/MV5BNmU5OTQ0OWQtOTY0OS00Yjg4LWE1NDYtNDRhYWMxYWY4OTMwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg">
                                 </div>
-                                <div class="slide"><img
+                                <div class="slide">
+                                        <img
                                                 src="https://m.media-amazon.com/images/M/MV5BMjE4NTg1MjUyN15BMl5BanBnXkFtZTcwMjAyNDczMQ@@._V1_SX300.jpg">
+                                </div>
+                                <div class="slide">
+                                        <img
+                                                src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+                                </div>
+                                <div class="slide">
+                                        <img
+                                                src="https://m.media-amazon.com/images/M/MV5BNzM3NDFhYTAtYmU5Mi00NGRmLTljYjgtMDkyODQ4MjNkMGY2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg">
+                                </div>
+                                <div class="slide">
+                                        <img
+                                                src="https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg">
+                                </div>
+                        </section>
+                </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="container">
+                <div class="[ row ]">
+                        <div class="title_new">New Releases
+                        </div>
+                </div>
+
+                <div class="[ col-lg-12 ]">
+                        <section class="movie-poster slider">
+                                <div class="slide"><img
+                                                src="https://m.media-amazon.com/images/M/MV5BYTJlNjlkZTktNjEwOS00NzI5LTlkNDAtZmEwZDFmYmM2MjU2XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg">
+                                </div>
+                                <div class="slide"><img
+                                                src="https://m.media-amazon.com/images/M/MV5BZTllZTdlOGEtZTBmMi00MGQ5LWFjN2MtOGEyZTliNGY1MzFiXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg">
                                 </div>
                                 <div class="slide"><img
                                                 src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
                                 </div>
                                 <div class="slide"><img
-                                                src="https://m.media-amazon.com/images/M/MV5BNzM3NDFhYTAtYmU5Mi00NGRmLTljYjgtMDkyODQ4MjNkMGY2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg">
+                                                src="https://m.media-amazon.com/images/M/MV5BNTAxZWM2OTgtOTQzOC00ZTI5LTgyYjktZTRhYWM4YWQxNWI0XkEyXkFqcGdeQXVyMjMwNDgzNjc@._V1_SX300.jpg">
+                                </div>
+                                <div class="slide"><img
+                                                src="https://m.media-amazon.com/images/M/MV5BMTc1NjIzODAxMF5BMl5BanBnXkFtZTgwMTgzNzk1NzM@._V1_SX300.jpg">
+                                </div>
+                                <div class="slide"><img
+                                                src="https://m.media-amazon.com/images/M/MV5BYmE0OTE5NWItMGYyZi00MzUxLWFjN2QtYzBkZGRjZGVmMGFmXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg">
+                                </div>
+                                <div class="slide"><img
+                                                src="https://m.media-amazon.com/images/M/MV5BY2U1NmIwYzgtNjFkOS00YWUxLTg0YTMtZmE5NTA3YjRmY2NlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg">
+                                </div>
+                                <div class="slide"><img
+                                                src="https://m.media-amazon.com/images/M/MV5BNjM5ZTNiNGMtMDA2OC00MDYyLWEyNzAtOWZmMzFlY2VmOWM4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
                                 </div>
                                 <div class="slide"><img
                                                 src="https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg">
                                 </div>
                         </section>
                 </div>
+        </div>
 
-                <br>
-                <br>
-                <br>
-                <br>
-
-                <div class="[ row ]">
-                        <div class="title_new">New Releases
-                        </div>
-                </div>
-
-
-                <div class="container">
-
-                        <div class="[ col-lg-12 ]">
-                                <section class="movie-poster slider">
-                                        <div class="slide"><img
-                                                        src="https://m.media-amazon.com/images/M/MV5BYTJlNjlkZTktNjEwOS00NzI5LTlkNDAtZmEwZDFmYmM2MjU2XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg">
-                                        </div>
-                                        <div class="slide"><img
-                                                        src="https://m.media-amazon.com/images/M/MV5BZTllZTdlOGEtZTBmMi00MGQ5LWFjN2MtOGEyZTliNGY1MzFiXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg">
-                                        </div>
-                                        <div class="slide"><img
-                                                        src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
-                                        </div>
-                                        <div class="slide"><img
-                                                        src="https://m.media-amazon.com/images/M/MV5BNTAxZWM2OTgtOTQzOC00ZTI5LTgyYjktZTRhYWM4YWQxNWI0XkEyXkFqcGdeQXVyMjMwNDgzNjc@._V1_SX300.jpg">
-                                        </div>
-                                        <div class="slide"><img
-                                                        src="https://m.media-amazon.com/images/M/MV5BMTc1NjIzODAxMF5BMl5BanBnXkFtZTgwMTgzNzk1NzM@._V1_SX300.jpg">
-                                        </div>
-                                        <div class="slide"><img
-                                                        src="https://m.media-amazon.com/images/M/MV5BYmE0OTE5NWItMGYyZi00MzUxLWFjN2QtYzBkZGRjZGVmMGFmXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg">
-                                        </div>
-                                        <div class="slide"><img
-                                                        src="https://m.media-amazon.com/images/M/MV5BY2U1NmIwYzgtNjFkOS00YWUxLTg0YTMtZmE5NTA3YjRmY2NlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg">
-                                        </div>
-                                        <div class="slide"><img
-                                                        src="https://m.media-amazon.com/images/M/MV5BNjM5ZTNiNGMtMDA2OC00MDYyLWEyNzAtOWZmMzFlY2VmOWM4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
-                                        </div>
-                                        <div class="slide"><img
-                                                        src="https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg">
-                                        </div>
-                                </section>
-                        </div>
-
-                        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-                        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-                        <script src="js/movies.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="js/movies.js"></script>
 </body>
 
 </html>
