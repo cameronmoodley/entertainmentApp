@@ -1,4 +1,6 @@
 let data = [];
+let storedSearches = [];
+
 
 function runSearch() {
     let searchInput = document.getElementById("search").value;
@@ -67,5 +69,25 @@ var modal = document.getElementById('loginModal');
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
+    }
+}
+
+// Store previous searches
+
+function storeSearch() {
+    let searchInput = document.getElementById("search").value;
+    if (searchInput !== "") {
+        if (storedSearches.length <= 4) {
+            storedSearches.push(searchInput);
+            storedSearches.reverse();
+            console.log(storedSearches);
+        } else {
+            storedSearches.pop();
+            storedSearches.push(searchInput);
+            storedSearches.reverse();
+            console.log(storedSearches);
+        }
+    } else {
+        return;
     }
 }
