@@ -1,0 +1,53 @@
+body{
+  font-family: "adobe-kannada", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.header{
+  display: block;
+  z-index: -1;
+  &-text{
+      z-index: 1;
+      color: #DAA520;
+      position: absolute;
+      font-size: 90px;
+      line-height: 90px;
+      font-family: adobe-kannada, sans-serif;
+      padding: 8% 14%;
+  }
+  &-img {
+      width: 100%;
+      z-index: -9999;
+  }
+  &-button{
+    position: absolute;
+    color: #DAA520;
+    border: none;
+    background-color: transparent;
+    right: 650px;
+    z-index: 700;
+    font-size: 3em; 
+    
+
+    &-login{
+      background-color: #DAA520;
+      padding: 5px 60px;
+      border: none;
+      color: #191919;
+      position: absolute;
+      font-size: 15px;
+      margin: 34% 15%;
+  }
+  }
+
+}
+
+.icon{
+  color: #DAA520;
+  position: absolute;
+  margin: 5% 10%;
+  font-size: 40px;
+}
+
